@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiHeart, FiUsers, FiGraduationCap, FiHome, FiCheck, FiCreditCard } from 'react-icons/fi';
+import { FiHeart, FiUsers, FiBook, FiHome, FiCheck, FiCreditCard } from 'react-icons/fi';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Donations = () => {
@@ -21,7 +21,7 @@ const Donations = () => {
     },
     {
       id: 'education',
-      icon: FiGraduationCap,
+      icon: FiBook,
       title: isRTL ? 'تعلیمی وظائف' : 'Educational Scholarships',
       description: isRTL ? 'ضرورت مند طلباء کے لیے وظائف' : 'Scholarships for needy students',
       raised: 45000,
