@@ -82,8 +82,7 @@ const Members = () => {
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
               {isRTL 
                 ? 'ہماری عالمی کمیونٹی کے اراکین اور خاندانی گروپس'
-                : 'Members and family groups of our global community'
-              }
+                : 'Members and family groups of our global community'}
             </p>
           </div>
         </div>
@@ -96,15 +95,18 @@ const Members = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="group text-center p-6 bg-card rounded-xl shadow-elegant hover:shadow-cultural transition-all duration-300 hover:-translate-y-2"
+                className="group relative text-center p-6 bg-card rounded-2xl shadow-lg transition-transform duration-500 hover:-translate-y-2"
               >
-                <div className="w-16 h-16 bg-gradient-cultural rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <stat.icon className="w-8 h-8 text-primary-foreground" />
+                <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-green-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+
+                <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gradient-to-r from-green-400 to-green-600 text-white rounded-full shadow-md text-2xl transition-transform duration-500 group-hover:scale-110">
+                  <stat.icon className="w-8 h-8" />
                 </div>
-                <div className="font-cultural text-3xl font-bold text-primary mb-2">
+
+                <div className="font-cultural text-3xl font-bold text-primary mb-2 relative z-10">
                   {stat.number}
                 </div>
-                <div className="text-muted-foreground font-medium">
+                <div className="text-muted-foreground font-medium relative z-10">
                   {stat.label}
                 </div>
               </div>
@@ -123,8 +125,7 @@ const Members = () => {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {isRTL 
                 ? 'مختلف شہروں میں منظم خاندانی گروپس'
-                : 'Organized family groups across different cities'
-              }
+                : 'Organized family groups across different cities'}
             </p>
           </div>
 
@@ -132,31 +133,29 @@ const Members = () => {
             {familyGroups.map((group, index) => (
               <div
                 key={index}
-                className="group p-6 bg-card rounded-xl shadow-elegant hover:shadow-cultural transition-all duration-300 hover:-translate-y-2"
+                className="group relative p-6 bg-white rounded-2xl shadow-lg transition-transform duration-500 hover:-translate-y-2"
               >
-                <div className="flex items-center justify-between mb-4">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-green-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+
+                <div className="flex items-center justify-between mb-4 relative z-10">
                   <h3 className="font-cultural text-xl font-semibold text-primary">
                     {group.name}
                   </h3>
                   <div className="w-3 h-3 bg-accent rounded-full group-hover:scale-125 transition-transform duration-300"></div>
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 relative z-10">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">
-                      {isRTL ? 'اراکین:' : 'Members:'}
-                    </span>
+                    <span className="text-muted-foreground">{isRTL ? 'اراکین:' : 'Members:'}</span>
                     <span className="font-semibold text-foreground">{group.members}</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">
-                      {isRTL ? 'مقام:' : 'Location:'}
-                    </span>
+                    <span className="text-muted-foreground">{isRTL ? 'مقام:' : 'Location:'}</span>
                     <span className="font-semibold text-foreground">{group.location}</span>
                   </div>
                 </div>
-                <div className="mt-4 w-full bg-muted rounded-full h-2">
+                <div className="mt-4 w-full bg-muted rounded-full h-2 relative z-10">
                   <div 
-                    className="bg-gradient-cultural h-2 rounded-full transition-all duration-500 group-hover:w-full"
+                    className="bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full transition-all duration-500 group-hover:w-full"
                     style={{ width: `${Math.min((group.members / 250) * 100, 100)}%` }}
                   ></div>
                 </div>
@@ -176,8 +175,7 @@ const Members = () => {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {isRTL 
                 ? 'کمیونٹی کی رکنیت کے فوائد اور مراعات'
-                : 'Benefits and privileges of community membership'
-              }
+                : 'Benefits and privileges of community membership'}
             </p>
           </div>
 
@@ -185,15 +183,17 @@ const Members = () => {
             {membershipBenefits.map((benefit, index) => (
               <div
                 key={index}
-                className="group p-6 bg-card rounded-xl shadow-elegant hover:shadow-cultural transition-all duration-300 hover:-translate-y-2"
+                className="group relative p-6 bg-white rounded-2xl shadow-lg transition-transform duration-500 hover:-translate-y-2"
               >
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-green-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+
+                <div className="text-4xl mb-4 relative z-10 transition-transform duration-500 group-hover:scale-110">
                   {benefit.icon}
                 </div>
-                <h3 className="font-cultural text-xl font-semibold text-primary mb-3">
+                <h3 className="font-cultural text-xl font-semibold text-primary mb-3 relative z-10">
                   {benefit.title}
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground relative z-10">
                   {benefit.description}
                 </p>
               </div>
@@ -213,13 +213,12 @@ const Members = () => {
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
                 {isRTL 
                   ? 'اپنی ثقافتی شناخت کو برقرار رکھیں اور عالمی کمیونٹی کا حصہ بنیں'
-                  : 'Preserve your cultural identity and become part of our global community'
-                }
+                  : 'Preserve your cultural identity and become part of our global community'}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/join-us"
-                  className="px-8 py-4 bg-gradient-cultural text-primary-foreground rounded-lg font-semibold shadow-heritage hover:shadow-cultural transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+                  className="px-8 py-4 bg-gradient-to-r from-green-400 to-green-600 text-white rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105"
                 >
                   {t('becomeAMember')}
                 </a>

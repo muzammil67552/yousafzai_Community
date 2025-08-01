@@ -25,50 +25,50 @@ const Home = () => {
   ];
 
   return (
-    <div className={`min-h-screen ${isRTL ? 'rtl' : 'ltr'}`}>
+    <div className={`min-h-screen mt-20 ${isRTL ? 'rtl' : 'ltr'}`}>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center pattern-hero bg-gradient-hero overflow-hidden">
-        {/* Decorative Elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-secondary-light rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-light rounded-full blur-3xl"></div>
+      <section className="relative min-h-screen flex items-center justify-center pattern-hero bg-gradient-to-br from-green-400 via-green-500 to-green-600 overflow-hidden">
+        {/* Decorative Blobs */}
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
+          <div className="absolute -top-20 -left-20 w-96 h-96 bg-green-300 rounded-full blur-[120px]"></div>
+          <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-green-500 rounded-full blur-[120px]"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-secondary/20 border border-secondary/30 rounded-full mb-8">
-              <span className="text-secondary-foreground font-medium">
+            <div className="inline-flex items-center px-6 py-2 bg-white/10 border border-white/30 backdrop-blur-sm rounded-full mb-8 shadow-lg">
+              <span className="text-white font-medium">
                 {isRTL ? '🏛️ ثقافتی میراث کے محافظ' : '🏛️ Guardians of Cultural Heritage'}
               </span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="font-cultural text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
               {t('heroTitle')}
             </h1>
-            
-            <h2 className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/90 mb-8 font-medium">
+
+            <h2 className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-8 font-medium">
               {t('heroSubtitle')}
             </h2>
 
-            <p className="text-lg md:text-xl text-primary-foreground/80 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed">
               {t('heroDescription')}
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex  gap-4 justify-center items-center md:p-10 p-6 ">
               <Link
                 to="/join-us"
-                className="group px-8 py-4 bg-secondary text-secondary-foreground rounded-lg font-semibold shadow-heritage hover:shadow-cultural transition-all duration-300 hover:-translate-y-1 hover:scale-105 flex items-center space-x-2"
+                className="  @apply md:px-6 md:py-3 px-4 py-2 bg-[#4CAF4F] text-white rounded-lg transition-transform transform hover:scale-110 hover:bg-white hover:text-[#4CAF4F] shadow-lg hover:shadow-2xl duration-300 ease-in-out px-4 py-4 space-x-2 group inline-flex items-center justify-center px-8 py-4 "
               >
                 <span>{t('joinUs')}</span>
-                <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 " />
               </Link>
-              
+
               <Link
                 to="/contact"
-                className="group px-8 py-4 bg-primary-foreground/10 text-primary-foreground border border-primary-foreground/20 rounded-lg font-semibold hover:bg-primary-foreground/20 transition-all duration-300 hover:-translate-y-1 hover:scale-105 flex items-center space-x-2"
+                className="@apply md:px-6 md:py-3 px-4 py-2 bg-[#4CAF4F] text-white rounded-lg transition-transform transform hover:scale-110 hover:bg-white hover:text-[#4CAF4F] shadow-lg hover:shadow-2xl duration-300 ease-in-out px-4 py-4 space-x-2 group inline-flex items-center justify-center px-8 py-4  "
               >
                 <span>{t('contactUs')}</span>
                 <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -79,39 +79,36 @@ const Home = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-primary-foreground/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-primary-foreground/60 rounded-full mt-2"></div>
+          <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/60 rounded-full mt-2"></div>
           </div>
         </div>
       </section>
 
-      {/* About Community Section */}
-      <section className="py-20 bg-gradient-heritage">
+      {/* Features Section */}
+      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-gray-100">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-cultural text-3xl md:text-4xl font-bold text-primary mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
               {t('aboutCommunity')}
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-12">
+            <p className="text-lg text-gray-600 leading-relaxed mb-12">
               {t('communityDescription')}
             </p>
 
-            {/* Features Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group p-6 bg-card rounded-xl shadow-elegant hover:shadow-cultural transition-all duration-300 hover:-translate-y-2"
+                  className="group p-8 rounded-2xl bg-gradient-to-br from-green-200 via-green-300 to-green-400 shadow-xl hover:shadow-2xl transform transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02]"
                 >
-                  <div className="w-16 h-16 bg-gradient-cultural rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-8 h-8 text-primary-foreground" />
+                  <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-6 backdrop-blur-md shadow-inner group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="font-cultural text-xl font-semibold text-primary mb-3">
+                  <h3 className="text-xl font-semibold text-white mb-3 drop-shadow-md">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground">
-                    {feature.description}
-                  </p>
+                  <p className="text-white/80">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -120,14 +117,16 @@ const Home = () => {
       </section>
 
       {/* Quick Actions Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-gradient-to-br from-green-100 via-white to-green-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-cultural text-3xl md:text-4xl font-bold text-primary mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               {isRTL ? 'جلدی رسائی' : 'Quick Access'}
             </h2>
-            <p className="text-lg text-muted-foreground">
-              {isRTL ? 'ہماری کمیونٹی کے اہم حصوں تک فوری رسائی' : 'Fast access to important sections of our community'}
+            <p className="text-lg text-gray-600">
+              {isRTL
+                ? 'ہماری کمیونٹی کے اہم حصوں تک فوری رسائی'
+                : 'Fast access to important sections of our community'}
             </p>
           </div>
 
@@ -141,13 +140,13 @@ const Home = () => {
               <Link
                 key={item.key}
                 to={item.path}
-                className="group p-6 bg-card rounded-xl shadow-elegant hover:shadow-cultural transition-all duration-300 hover:-translate-y-2 text-center"
+                className="group p-6 rounded-2xl bg-gradient-to-br from-green-200 via-green-300 to-green-400 shadow-xl hover:shadow-2xl transform transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] text-center"
               >
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   {item.icon}
                 </div>
-                <h3 className="font-semibold text-primary mb-2">{t(item.key)}</h3>
-                <div className="w-8 h-1 bg-gradient-cultural rounded-full mx-auto group-hover:w-12 transition-all duration-300"></div>
+                <h3 className="text-lg font-semibold text-white mb-2">{t(item.key)}</h3>
+                <div className="w-8 h-1 bg-white/50 rounded-full mx-auto group-hover:w-12 transition-all duration-300"></div>
               </Link>
             ))}
           </div>

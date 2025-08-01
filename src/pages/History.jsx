@@ -53,8 +53,7 @@ const History = () => {
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
               {isRTL 
                 ? 'درز خیل یوسفزئی قبیلے کی عظیم تاریخ اور ثقافتی میراث کا سفر'
-                : 'Journey through the great history and cultural heritage of Daraz Khail Yousafzai tribe'
-              }
+                : 'Journey through the great history and cultural heritage of Daraz Khail Yousafzai tribe'}
             </p>
           </div>
         </div>
@@ -98,18 +97,17 @@ const History = () => {
         </div>
       </section>
 
-      {/* Cultural Heritage Section */}
+      {/* Cultural Heritage Section (updated) */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-cultural text-3xl md:text-4xl font-bold text-primary mb-4">
+            <h2 className="font-cultural text-3xl md:text-5xl font-bold text-primary mb-4">
               {isRTL ? 'ثقافتی ورثہ' : 'Cultural Heritage'}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               {isRTL 
                 ? 'وہ اقدار اور روایات جو ہماری شناخت بناتی ہیں'
-                : 'The values and traditions that shape our identity'
-              }
+                : 'The values and traditions that shape our identity'}
             </p>
           </div>
 
@@ -117,17 +115,22 @@ const History = () => {
             {culturalAspects.map((aspect, index) => (
               <div
                 key={index}
-                className="group p-6 bg-card rounded-xl shadow-elegant hover:shadow-cultural transition-all duration-300 hover:-translate-y-2"
+                className="group relative overflow-hidden p-8 bg-white rounded-2xl shadow-lg transition-transform duration-500 hover:-translate-y-2 hover:shadow-xl"
               >
-                <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">🏛️</span>
+                <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-green-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-gradient-to-r from-green-400 to-green-600 text-white text-3xl shadow-md transition-transform duration-500 group-hover:scale-110">
+                  🏛️
                 </div>
-                <h3 className="font-cultural text-xl font-semibold text-primary mb-3 text-center">
+
+                <h3 className="font-cultural text-xl md:text-2xl font-semibold text-primary mb-3 z-10 relative text-center">
                   {aspect.title}
                 </h3>
-                <p className="text-muted-foreground text-center">
+                <p className="text-muted-foreground text-center z-10 relative leading-relaxed">
                   {aspect.description}
                 </p>
+
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 to-green-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
               </div>
             ))}
           </div>
@@ -147,15 +150,13 @@ const History = () => {
                 <p className="text-lg leading-relaxed mb-6">
                   {isRTL 
                     ? 'درز خیل یوسفزئی قبیلہ پشتون قوم کی ایک عظیم شاخ ہے جس کی جڑیں صدیوں پرانی ہیں۔ یہ قبیلہ ہمیشہ سے اپنی بہادری، دیانتداری اور مہمان نوازی کے لیے مشہور رہا ہے۔'
-                    : 'The Daraz Khail Yousafzai tribe is a great branch of the Pashtun nation with roots spanning centuries. This tribe has always been renowned for its bravery, honesty, and hospitality.'
-                  }
+                    : 'The Daraz Khail Yousafzai tribe is a great branch of the Pashtun nation with roots spanning centuries. This tribe has always been renowned for its bravery, honesty, and hospitality.'}
                 </p>
                 
                 <p className="text-lg leading-relaxed">
                   {isRTL 
                     ? 'آج کے دور میں، ہم اپنی قدیم روایات کو برقرار رکھتے ہوئے جدید تعلیم اور ترقی کے راستے پر گامزن ہیں۔ ہماری کمیونٹی دنیا بھر میں پھیلی ہوئی ہے لیکن ہمارے دل ہمیشہ اپنی جڑوں سے جڑے رہتے ہیں۔'
-                    : 'In today\'s era, we are progressing on the path of modern education and development while maintaining our ancient traditions. Our community is spread across the world, but our hearts always remain connected to our roots.'
-                  }
+                    : 'In today\'s era, we are progressing on the path of modern education and development while maintaining our ancient traditions. Our community is spread across the world, but our hearts always remain connected to our roots.'}
                 </p>
               </div>
             </div>
