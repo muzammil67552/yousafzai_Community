@@ -1,14 +1,16 @@
-import React from 'react';
-import { FiArrowRight } from 'react-icons/fi';
+
 import { useLanguage } from '../contexts/LanguageContext';
 
 const JoinUs = () => {
   const { isRTL, t } = useLanguage();
 
   // ✅ Updated working App Script Form URL
-  const openForm = () => {
-  window.open('https://script.google.com/macros/s/AKfycbzcz9sFO1PuqW79oPCuSpo_k91p7EL0P6VRfXaPK36q_aRFepxZeB-_zl4O1bBZxWRynA/exec', '_blank');
-};
+ const openForm = () => {
+    window.open(
+      'https://script.google.com/macros/s/AKfycbzcz9sFO1PuqW79oPCuSpo_k91p7EL0P6VRfXaPK36q_aRFepxZeB-_zl4O1bBZxWRynA/exec',
+      '_blank'
+    );
+  };
 
 
   const membershipBenefits = [
@@ -84,25 +86,19 @@ const JoinUs = () => {
       </section>
 
       {/* Registration Button */}
-      <div className="text-center py-20">
-  <button
-    onClick={openForm}
-    className="
-      px-8 py-4
-      bg-gradient-to-br from-green-400 via-green-500 to-green-600 
-      text-white 
-      rounded-lg 
-      shadow-lg 
-      transition-all duration-300 ease-in-out 
-      transform hover:scale-110
-      hover:bg-white hover:text-green-600 hover:border hover:border-green-600
-      inline-flex items-center justify-center space-x-2
-    "
-  >
-    <span>{t('Registration')}</span>
-    <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-  </button>
-</div>
+     <div className="min-h-screen bg-gradient-to-br from-purple-200 to-blue-100 flex items-center justify-center px-4">
+      <div className="text-center bg-white p-10 rounded-2xl shadow-xl w-full max-w-md">
+        <h1 className="text-3xl font-bold text-purple-700 mb-6">Welcome</h1>
+        <p className="text-gray-600 mb-8">Click below to register using our form.</p>
+        <button
+          onClick={openForm}
+          className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition duration-300 shadow-md"
+        >
+          Register Now
+        </button>
+      </div>
+    </div>
+
 
     </div>
   );
