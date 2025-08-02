@@ -8,7 +8,7 @@ const JoinUs = () => {
   // ✅ Updated working App Script Form URL
   const openForm = () => {
     window.open(
-      'https://script.google.com/macros/s/AKfycbwWXdUYCdlsH8uE8c7v0MD-dpb95wl7ROieFMMEn9upoD7v8yzp-X2-Mi5CT1xILSWXmQ/exec',
+      'https://script.google.com/macros/s/AKfycbzcz9sFO1PuqW79oPCuSpo_k91p7EL0P6VRfXaPK36q_aRFepxZeB-_zl4O1bBZxWRynA/exec',
       '_blank'
     );
   };
