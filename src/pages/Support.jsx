@@ -312,7 +312,7 @@ const Support = () => {
               </p>
               <a
                 href="/contact"
-                className="inline-block px-8 py-4 bg-gradient-cultural text-primary-foreground rounded-lg font-semibold shadow-heritage hover:shadow-cultural transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+                className="bg-gradient-to-r from-green-500 to-green-700 hover:from-white hover:to-white hover:text-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 hover:scale-105 inline-block"
               >
                 {t('contactUs')}
               </a>
