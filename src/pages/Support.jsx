@@ -80,21 +80,21 @@ const Support = () => {
       icon: FiMail,
       title: isRTL ? 'ای میل سپورٹ' : 'Email Support',
       description: isRTL ? '24 گھنٹے کے اندر جواب' : 'Response within 24 hours',
-      contact: 'support@darazkhail.com',
+      contact: 'jansherkhan070@gmail.com',
       color: 'bg-blue-500'
     },
     {
       icon: FiPhone,
       title: isRTL ? 'فون سپورٹ' : 'Phone Support',
       description: isRTL ? 'فوری مدد کے لیے کال کریں' : 'Call for immediate assistance',
-      contact: '+92 XXX XXX XXXX',
+      contact: '+92 3158517604',
       color: 'bg-green-500'
     },
     {
       icon: FiMessageCircle,
       title: isRTL ? 'واٹس ایپ' : 'WhatsApp',
       description: isRTL ? 'فوری پیغام کے لیے' : 'For quick messaging',
-      contact: '+92 XXX XXX XXXX',
+      contact: '+92 3158517604',
       color: 'bg-emerald-500'
     }
   ];

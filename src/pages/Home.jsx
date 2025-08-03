@@ -5,6 +5,13 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 const Home = () => {
   const { isRTL, t } = useLanguage();
+    // ✅ Updated working App Script Form URL
+  const openForm = () => {
+    window.open(
+      'https://script.google.com/macros/s/AKfycbzcz9sFO1PuqW79oPCuSpo_k91p7EL0P6VRfXaPK36q_aRFepxZeB-_zl4O1bBZxWRynA/exec',
+      '_blank'
+    );
+  };
 
   const features = [
     {
@@ -152,6 +159,32 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Registration Button */}
+      <div className="text-center bg-white p-10 rounded-3xl shadow-2xl w-full max-w-md mx-auto mt-10 mb-20">
+        <h1 className="text-3xl font-bold text-green-700 mb-4">خوش آمدید</h1>
+        <p className="text-gray-700 mb-8 text-lg">
+          نیچے دیے گئے بٹن پر کلک کریں اور فارم کے ذریعے رجسٹریشن کریں۔
+        </p>
+
+        <button
+          onClick={openForm}
+          className="bg-gradient-to-r from-green-500 to-green-700 hover:from-white hover:to-white hover:text-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 hover:scale-105 inline-block"
+        >
+          ابھی رجسٹر کریں
+        </button>
+
+        <p className="text-gray-700 mb-8 text-lg mt-10">یا</p>
+
+        {/* ✅ Working download link */}
+        <a
+          href="/form.jpg"
+          download="DarazKhailYousafzai_Form.jpg"
+          className="bg-gradient-to-r from-green-500 to-green-700 hover:from-white hover:to-white hover:text-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 hover:scale-105 inline-block"
+        >
+          فارم ڈاؤن لوڈ کریں
+        </a>
+      </div>
+      
     </div>
   );
 };

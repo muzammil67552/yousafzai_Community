@@ -89,13 +89,27 @@ const JoinUs = () => {
   <p className="text-gray-700 mb-8 text-lg">
     نیچے دیے گئے بٹن پر کلک کریں اور فارم کے ذریعے رجسٹریشن کریں۔
   </p>
+
   <button
     onClick={openForm}
-    className="bg-gradient-to-r from-green-500 to-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 hover:scale-105 hover:from-white hover:to-white hover:text-green-700"
+    className="bg-gradient-to-r from-green-500 to-green-700 hover:from-white hover:to-white hover:text-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 hover:scale-105 inline-block"
   >
     ابھی رجسٹر کریں
   </button>
+
+  <p className="text-gray-700 mb-8 text-lg mt-10">یا</p>
+
+  {/* ✅ Working download link */}
+  <a
+    href="/form.jpg"
+    download="DarazKhailYousafzai_Form.jpg"
+    className="bg-gradient-to-r from-green-500 to-green-700 hover:from-white hover:to-white hover:text-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 hover:scale-105 inline-block"
+  >
+    فارم ڈاؤن لوڈ کریں
+  </a>
 </div>
+
+
 
     </div>
   );
