@@ -61,7 +61,7 @@ const Contact = () => {
           {/* Left Section */}
           <div className="flex flex-col justify-between space-y-8 md:w-1/2">
             <div>
-              <h1 className="text-4xl md:text-7xl font-bold tracking-wide">
+              <h1 className="text-4xl md:text-3xl font-bold tracking-wide">
                 {t('contactUs')}
               </h1>
               <p className="pt-4 text-lg md:text-2xl">
