@@ -34,9 +34,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
-              <div className="w-14 h-14 bg-gradient-to-br from-[#4CAF4F] to-[#2F855A] rounded-xl flex items-center justify-center shadow-lg transform hover:scale-105 transition-transform duration-300">
-                <span className="text-white font-bold text-2xl">DK</span>
-              </div>
+              <img src='/public/Logo.png' alt='Logo' className='w-14 h-14 rounded-xl flex items-center justify-center shadow-lg transform hover:scale-105 transition-transform duration-300'/>
               <div>
                 <h3 className="font-cultural text-xl font-bold text-primary">Daraz Khail Yousafzai</h3>
                 <p className="text-sm text-muted-foreground">Community</p>
